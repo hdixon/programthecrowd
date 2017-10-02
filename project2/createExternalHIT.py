@@ -5,7 +5,7 @@ from boto.mturk.question import ExternalQuestion
 ######  CONFIGURATION PARAMETRS  ######
 
 SANDBOX = True  # Select whether to post to the sandbox (using fake money), or live MTurk site (using REAL money)
-HIT_URL = "http://census.stanford.edu/client/demo/maintask.html"  # Provide the URL that you want workers to sent sent to complete you task
+HIT_URL = "https://hdixon.github.io/programthecrowd/project2/index.html"  # Provide the URL that you want workers to sent sent to complete you task
 
 NUMBER_OF_HITS = 3  # Number of different HITs posted for this task
 NUMBER_OF_ASSIGNMENTS = 50  # Number of tasks that DIFFERENT workers will be able to take for each HIT
@@ -24,9 +24,9 @@ KEYWORDS = ['example', 'test', 'Mechanical Turk']
 
 
 # Your Amazon Web Services Access Key (private)
-AWS_ACCESS_KEY = '' # <-- TODO: Enter your access key here
+AWS_ACCESS_KEY = 'AKIAI2MQSUNCDFGQCXMQ' # <-- TODO: Enter your access key here
 # Your Amazon Web Services Secret Key (private)
-AWS_SECRET_KEY = '' # <-- TODO: Enter your private key here
+AWS_SECRET_KEY = 'A4WRrcG8SaxjQ7cZIx6TDCzPxQ7LswpRCRtGPMNU' # <-- TODO: Enter your private key here
 
 #######################################
 
@@ -45,7 +45,6 @@ def create_hits():
 		create_hit_rs = conn.create_hit(question=q, lifetime=LIFETIME, max_assignments=NUMBER_OF_ASSIGNMENTS, title=TITLE, keywords=KEYWORDS, reward=REWARD, duration=DURATION, approval_delay=APPROVAL_DELAY, annotation=DESCRIPTION)
 		print(preview_url + create_hit_rs[0].HITTypeId)
 		print("HIT ID: " + create_hit_rs[0].HITId)
-    
+
 if __name__ == "__main__":
 	create_hits()
-
