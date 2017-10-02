@@ -1,48 +1,61 @@
-
 <html>
+
 <head>
   <!-- Bootstrap v3.0.3 -->
   <link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="mturk.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="mturk.js"></script>
+
+
+  <style>
+    img {
+      padding: 1em;
+      width: 2em;
+    }
+  </style>
 </head>
+
+
 <body>
-<form id="mturk_form">
-<section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">
-<div class="row col-xs-12 col-md-12"><!-- Instructions -->
-<div class="panel panel-primary">
-<div class="panel-heading"><strong>Instructions</strong></div>
+  <form id="mturk_form">
+    <section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">
+      <div class="row col-xs-12 col-md-12">
+        <!-- Instructions -->
+        <div class="panel panel-primary">
+          <div class="panel-heading"><strong>Instructions</strong></div>
 
-<div class="panel-body">
-<p>Your job is simple. Click on all the <b>human</b> faces you can identify in the picture.</p>
+          <div class="panel-body">
+            <p>Your job is simple. Click on all the <b>human</b> faces you can identify in the picture.</p>
 
-<ul>
-	<li>Left click on a face to count and mark the face</li>
-	<li>If you make a mistake, right click on the marker to remove it</li>
-</ul>
-</div>
-</div>
-<!-- End Instructions --><!-- Content Body -->
+            <ul>
+              <li>Left click on a face to count and mark the face</li>
+              <li>If you make a mistake, right click on the marker to remove it</li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Instructions -->
+        <!-- Content Body -->
 
-<section>
-<fieldset>
-<div class="form-group"><label for="usr">Name:</label> <input class="form-control" id="usr" type="textbox" /></div>
-</fieldset>
+        <section>
+          <fieldset>
+            <div class="form-group"><label for="usr"><h1>Tell me a joke</h1></label>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+          </fieldset>
 
-<fieldset>
-<div class="img-toidentify">
-<center><img src="https://lh6.googleusercontent.com/FR9s1aey5NSFMJzY4X644Ck3JSQREsv45XG6j5wu7GLAD5KAnFA13d6BXkYBM3k-lQeHJc0m-a4Dj5qbbPc9ch66ZsuyCInKfuR_Qrv4MR03w8nQNrAuMq_LpAViNtXV7JWm7XA" /></center>
-<center><img src="https://lh3.googleusercontent.com/-VcLKFmEVEgoryeqRTTwcEXJWPrrg9zbWQ0bsuKZLdQBe0eDi0ZRtrM_onfh7_WilFascU2LYKBo53YB7sHiKEI0hjpou7HTNwu5PKidAd34e9gQa--va2a_ejSNc8wh_5Pemjk" /></center>
-<center><img src="https://lh6.googleusercontent.com/8QFUUSg9773XvBcQ6aUp_0JpsjGbHtSgJB7kKZIcTMNr3EePhSOC3EwulKeRllMx2wDMHq0ju4d06PRUdIk3YTnwXwAmoWMVssnZgjNFnfNws8y7smcHzF-ZuIz0HGrpp5N7pFo" /></center>
-<center><img src="https://lh3.googleusercontent.com/bnyWzwHUX7O4cQOyj8u6KXX1vv-1bL0Ec4cKZL7bOnAzfasBGpvVvBqWu6YDQ0GUf0bgu7VwJWlDxykrtaqwyXi0Mvtq3AlajtovU09Xzmw2VIC7owyAQD92m8YIsH2BtpuZ2EU" /></center>
-<center><img src="https://lh6.googleusercontent.com/Xet1f95WqtvjyW2FS3352FbSxTL5QAPftOErhxFgjzS5sWjUAp2VsHAPTlvhZmXq2opzzVjtKQAA_u-37wgyZ-xHJAharrCSzLdzwY_sHUZ8Gyhtzn5aQcFwVTqJpyveo54_xJU" /></center>
-<center><img src="https://lh4.googleusercontent.com/JOPRVinPqHlrqtyWulHttb4uHttZY1S_no5eP-n9xSlBTemAW1UUrxCXGpeInHqwPsV_WNTkVHRcxZdUju1JEzswLNLemYjZp2mGiPkg2DpIyIj9OIRwMv-ZmWOr5wjjQ3CC3Ig" /></center>
+          <fieldset>
+            <div class="row col-xs-12 col-md-12">
+              <img src="https://lh6.googleusercontent.com/FR9s1aey5NSFMJzY4X644Ck3JSQREsv45XG6j5wu7GLAD5KAnFA13d6BXkYBM3k-lQeHJc0m-a4Dj5qbbPc9ch66ZsuyCInKfuR_Qrv4MR03w8nQNrAuMq_LpAViNtXV7JWm7XA" width=650px />
+              <img src="https://lh3.googleusercontent.com/-VcLKFmEVEgoryeqRTTwcEXJWPrrg9zbWQ0bsuKZLdQBe0eDi0ZRtrM_onfh7_WilFascU2LYKBo53YB7sHiKEI0hjpou7HTNwu5PKidAd34e9gQa--va2a_ejSNc8w" width=650px />
+              <img src="https://lh6.googleusercontent.com/8QFUUSg9773XvBcQ6aUp_0JpsjGbHtSgJB7kKZIcTMNr3EePhSOC3EwulKeRllMx2wDMHq0ju4d06PRUdIk3YTnwXwAmoWMVssnZgjNFnfNws8y7smcHzF-ZuIz0HGrpp5N7pFo" width=650px />
+              <img src="https://lh3.googleusercontent.com/bnyWzwHUX7O4cQOyj8u6KXX1vv-1bL0Ec4cKZL7bOnAzfasBGpvVvBqWu6YDQ0GUf0bgu7VwJWlDxykrtaqwyXi0Mvtq3AlajtovU09Xzmw2VIC7owyAQD92m8YIsH2BtpuZ2EU" width=650px />
+              <img src="https://lh6.googleusercontent.com/Xet1f95WqtvjyW2FS3352FbSxTL5QAPftOErhxFgjzS5sWjUAp2VsHAPTlvhZmXq2opzzVjtKQAA_u-37wgyZ-xHJAharrCSzLdzwY_sHUZ8Gyhtzn5aQcFwVTqJpyveo54_xJU" width=650px />
+              <img src="https://lh4.googleusercontent.com/JOPRVinPqHlrqtyWulHttb4uHttZY1S_no5eP-n9xSlBTemAW1UUrxCXGpeInHqwPsV_WNTkVHRcxZdUju1JEzswLNLemYjZp2mGiPkg2DpIyIj9OIRwMv-ZmWOr5wjjQ3CC3Ig" width=650px />
 
+            </div>
+          </fieldset>
 
-</div>
-</fieldset>
-
-<input type="submit">
-</form>
+          <center><input type="submit"></center>
+  </form>
 </body>
+
 </html>
