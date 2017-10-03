@@ -31,6 +31,7 @@ AWS_SECRET_KEY = 'A4WRrcG8SaxjQ7cZIx6TDCzPxQ7LswpRCRtGPMNU' # <-- TODO: Enter yo
 #######################################
 
 
+
 def create_hits():
 	if SANDBOX:
 		mturk_url = 'mechanicalturk.sandbox.amazonaws.com'
